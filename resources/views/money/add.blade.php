@@ -5,7 +5,6 @@
 @section ('content')
      <div class="row justify-content-center">
             <div class="col-lg-5">
-                {{-- Jika kita berhasil melakukan registrasi alert ini akan muncul , alert ini diatur didalam RegisterController --}}
                 @if (session('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session ('success') }}

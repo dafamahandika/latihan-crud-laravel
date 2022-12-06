@@ -24,3 +24,5 @@ Route::post('/create', [MoneyController::class, 'storeMoney'])->name('storeMoney
 
 Route::get('/edit/{id}', [MoneyController::class, 'editMoney'])->name('editMoney');
 Route::post('/edit/{id}', [MoneyController::class, 'updateMoney'])->name('updateMoney');
+
+Route::post('/delete/{id}',[MoneyController::class, 'destroyMoney' ]) -> name('destroyMoney');

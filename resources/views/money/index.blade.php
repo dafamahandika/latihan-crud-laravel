@@ -80,7 +80,11 @@
                         <td>{{$dt->class}}</td>
                         <td>Rp. {{number_format($dt->money,2,",",".")}}</td>
                         <td>
-                              <a href="{{ route('editMoney', $dt->id) }}" class="btn btn-secondary">Edit</a>
+                        <form action="{{route('destroyMoney', $dt->id) }}" method="post">
+                                <a class="btn btn-success" href="{{route('editMoney', $dt->id) }}">Edit</a>
+                                @csrf
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                         </tr>
                         @endforeach
