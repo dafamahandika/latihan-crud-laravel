@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section ('title')
-     Add Money Safe
+     Edit Money Safe
 @endsection
 @section ('content')
      <div class="row justify-content-center">

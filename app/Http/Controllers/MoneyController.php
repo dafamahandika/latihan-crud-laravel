@@ -102,7 +102,7 @@ class MoneyController extends Controller
         if($request->action == 'add') {
             $total_money = $data['money'] + $request->money;
         } else{   
-            if($data['money'] < $request->money){
+            if($data['money'] < $request->money && $data['money'] == $request->money){
                 return redirect(route('indexMoney'))->with('fail', 'Saldo anda kurang!!');
             } else{
                 $total_money = $data['money'] - $request->money;
