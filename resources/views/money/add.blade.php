@@ -32,6 +32,7 @@
                               </div>
                               <div class="form-floating mb-3 mt-3">
                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="region">
+                                        <option value="Cicurug 1"></option>
                                         <option value="Cicurug 1">Cicurug 1</option>
                                         <option value="Cicurug 2">Cicurug 2</option>
                                         <option value="Cicurug 3">Cicurug 3</option>

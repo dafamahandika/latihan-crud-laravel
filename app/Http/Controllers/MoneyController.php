@@ -95,15 +95,17 @@ class MoneyController extends Controller
             'class' =>'required',
             'action' =>'required',
             'money' =>'required',
-        ]);
+        ]); 
 
         $data = Money::where('id', $id)->first();
 
-        if($request->action == 'add') {
+        if ($request->action == 'add') {
             $total_money = $data['money'] + $request->money;
         } else{   
-            if($data['money'] < $request->money && $data['money'] == $request->money){
+            if ($data['money'] < $request->money){
                 return redirect(route('indexMoney'))->with('fail', 'Saldo anda kurang!!');
+            } elseif( $data['money'] == $request->money){
+                $total_money = $data['money'] - $request->money;
             } else{
                 $total_money = $data['money'] - $request->money;
             }

@@ -15,5 +15,7 @@ class Money extends Model
       'region',
       'class',
       'money', 
+      'created_at',
+      'updated_at',
     ];
 }
